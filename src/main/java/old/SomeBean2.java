@@ -1,3 +1,5 @@
+package old;
+
 public class SomeBean2 {
 
     private SomeBean someBean;
@@ -13,7 +15,7 @@ public class SomeBean2 {
 
     @Override
     public String toString() {
-        return "SomeBean2{" +
+        return "old.SomeBean2{" +
                 "someBean=" + someBean +
                 ", age=" + age +
                 '}';

@@ -8,7 +8,7 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 
-    <bean id="test" scope="prototype" class="SomeBean">
+    <bean id="test" scope="prototype" class="old.SomeBean">
 
     <constructor-arg name="age" value="1"/>
         <constructor-arg name="name" value="title"/>
@@ -56,23 +56,23 @@
 
 
 </bean>
-    <bean id="someBean2v1" class="SomeBean2">
+    <bean id="someBean2v1" class="old.SomeBean2">
         <property name="someBean" ref="test"/>
 
     </bean>
 
 
-   <!-- <bean id="someBean2v2" class="SomeBean2" p:someBean-ref="test"/>
+   <!-- <bean id="someBean2v2" class="old.SomeBean2" p:someBean-ref="test"/>
 
 
 
-    <bean id="someBean2v3" class="SomeBean2">
+    <bean id="someBean2v3" class="old.SomeBean2">
         <property name="someBean" ref="test"/>
     </bean>-->
 
     <bean id="ldt2" class="java.time.LocalDateTime" factory-method="now"/>
 
-<bean id="someBean3" class="SomeBean3" autowire="constructor">
+<bean id="someBean3" class="old.SomeBean3" autowire="constructor">
 
  <!--   <constructor-arg name="someBean" ref="test" />
     <constructor-arg name="someBean2" ref="someBean2v1"/>-->

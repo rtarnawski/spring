@@ -1,3 +1,5 @@
+package old;
+
 public class SomeBean3 {
 
     private SomeBean someBean;
@@ -8,13 +10,13 @@ public class SomeBean3 {
         this.someBean = someBean;
         this.someBean2 = someBean2;
     }
- /*   public SomeBean3() {
+ /*   public old.SomeBean3() {
 
     }*/
     @Override
     public String toString() {
 
-        return "SomeBean3{" +
+        return "old.SomeBean3{" +
                 "someBean=" + someBean +
                 ", someBean2=" + someBean2 +
                 '}';

@@ -1,3 +1,5 @@
+package old;
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -15,7 +17,7 @@ public class SomeBean {
     @Override
     public String toString() {
 
-        return "SomeBean{" +
+        return "old.SomeBean{" +
                 "name='" + name + '\'' +
                 ", age=" + age +
                 ", list=" + list +
