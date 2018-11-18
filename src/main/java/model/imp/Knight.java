@@ -14,9 +14,15 @@ public class Knight {
 
     private String name;
 
-    @Autowired
-    @Qualifier("saveQueenQuest")
     private Quest quest;
+
+    @Autowired
+    public Knight( @Qualifier("saveQueenQuest") Quest quest, List<Quest> quests) {
+
+
+        this.quest = quest;
+        this.quests = quests;
+    }
     @Override
     public String toString() {
 
@@ -26,13 +32,14 @@ public class Knight {
                 ", quests=" + quests +
                 '}';
     }
-    @Autowired
+
     private List<Quest> quests = new ArrayList<>();
 
     public List<Quest> getQuests() {
 
         return quests;
     }
+
     public void setQuests(List<Quest> quests) {
 
         this.quests = quests;
@@ -41,6 +48,7 @@ public class Knight {
 
         return quest;
     }
+
     public void setQuest(Quest quest) {
 
         this.quest = quest;
@@ -53,6 +61,7 @@ public class Knight {
 
         return name;
     }
+
     public void setName(String name) {
 
         this.name = name;
