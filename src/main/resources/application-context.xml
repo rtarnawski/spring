@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:c="http://www.springframework.org/schema/c"
+
+
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+    <bean id="test" scope="prototype" class="SomeBean">
+
+    <constructor-arg name="age" value="1"/>
+        <constructor-arg name="name" value="title"/>
+        <constructor-arg name="list">
+            <list>
+                <value>Wartość1</value>
+                <value>Wartość2</value>
+                <value>Wartość3</value>
+                <value>Wartość4</value>
+            </list>
+
+        </constructor-arg>
+        <constructor-arg name="set">
+            <set>
+                <value>Set1</value>
+                <value>Set2</value>
+                <value>Set3</value>
+                <value>Set4</value>
+            </set>
+
+
+        </constructor-arg>
+
+        <constructor-arg name="table">
+            <array>
+                <value>tab1</value>
+                <value>tab2</value>
+                <value>tab3</value>
+                <value>tab4</value>
+
+            </array>
+
+
+
+        </constructor-arg>
+
+        <constructor-arg name="map">
+            <map>
+
+                <entry key="jeden" value="jeden"/>
+                <entry key="dwa" value="dwa"/>
+            </map>
+        </constructor-arg>
+
+
+
+</bean>
+    <bean id="someBean2v1" class="SomeBean2">
+        <property name="someBean" ref="test"/>
+
+    </bean>
+
+
+   <!-- <bean id="someBean2v2" class="SomeBean2" p:someBean-ref="test"/>
+
+
+
+    <bean id="someBean2v3" class="SomeBean2">
+        <property name="someBean" ref="test"/>
+    </bean>-->
+
+    <bean id="ldt2" class="java.time.LocalDateTime" factory-method="now"/>
+
+<bean id="someBean3" class="SomeBean3" autowire="constructor">
+
+ <!--   <constructor-arg name="someBean" ref="test" />
+    <constructor-arg name="someBean2" ref="someBean2v1"/>-->
+
+</bean>
+
+
+</beans>
