@@ -1,5 +1,6 @@
 import configuration.JavaConfig;
 import model.imp.Knight;
+import model.imp.SaveQueenQuest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -10,6 +11,7 @@ public class Main {
 
         Knight knight = context.getBean("knight", Knight.class);
         System.out.println(knight);
+        knight.setQuest(context.getBean("queen", SaveQueenQuest.class));
         knight.getQuest().empbarkQuest();
 
 
