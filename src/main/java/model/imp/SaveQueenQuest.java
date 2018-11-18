@@ -1,5 +1,7 @@
 package model.imp;
 
+import org.springframework.stereotype.Component;
+@Component
 public class SaveQueenQuest implements Quest {
 
     @Override
